@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Timezone Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>⏰ Global Time Zone Clock</h1>
+            <p>Real-time display across world time zones</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="container">
+            <!-- Control Panel -->
+            <section class="control-panel">
+                <div class="controls">
+                    <button class="btn btn-primary" id="addClockBtn">+ Add Time Zone</button>
+                    <button class="btn btn-secondary" id="resetBtn">Reset to Default</button>
+                    <label class="toggle-label">
+                        <input type="checkbox" id="format24Toggle" checked>
+                        <span>24-Hour Format</span>
+                    </label>
+                    <label class="toggle-label">
+                        <input type="checkbox" id="darkModeToggle" checked>
+                        <span>Dark Mode</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Modal for Adding Time Zones -->
+            <div id="timezoneModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Select a Time Zone</h2>
+                    <input type="text" id="timezoneSearch" placeholder="Search time zones...">
+                    <div class="timezone-list" id="timezoneList"></div>
+                </div>
+            </div>
+
+            <!-- Clocks Grid -->
+            <section class="clocks-grid" id="clocksGrid">
+                <!-- Clocks will be dynamically added here -->
+            </section>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <p>No time zones added yet. Click "Add Time Zone" to get started!</p>
+            </div>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <h3>Total Clocks</h3>
+                    <p id="totalClocks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Current UTC</h3>
+                    <p id="utcTime">--:--:--</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Your Local Time</h3>
+                    <p id="localTime">--:--:--</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Multi-Timezone Clock. Built with ❤️ by Web Developer</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
